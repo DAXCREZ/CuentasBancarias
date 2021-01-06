@@ -109,8 +109,24 @@ describe('test de cuenta bancaria',()=>{
       expect(CuentaBancaria.balance).toBe(0);
     });
 
+    test('Consignación posterior a la inicial correcta cuenta corriente', () => {
 
+      const newTransaccion: Transaction = new Transaction();
 
+      newTransaccion.city = "Valledupar";
+      newTransaccion.value = 100000;
+      CuentaBancaria.consing(newTransaccion);
+
+      newTransaccion.city = "Valledupar";
+      newTransaccion.value = 20000;
+      CuentaBancaria.remove(newTransaccion);
+
+      newTransaccion.city = "Valledupar";
+      newTransaccion.value = 20000;
+      CuentaBancaria.consing(newTransaccion);
+      expect(CuentaBancaria.balance).toBe(100000);
+
+    });
 
   })
 

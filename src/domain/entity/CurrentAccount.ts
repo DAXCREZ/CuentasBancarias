@@ -1,5 +1,6 @@
 import { BankAccount } from "./bank.account";
 import { Transaction } from "./transaction";
+import { FinancialMovement } from "./financial.movement";
 
 export class CurrentAccount extends BankAccount{
 
@@ -15,16 +16,20 @@ export class CurrentAccount extends BankAccount{
     }
   }
 
-  public remove(transaction: Transaction) {
-
-    if(this.ValidateFourForThousand(transaction) >= this.cupo_sobregiro){
+  public remove(transaction){
+    let newBalance: number = this.balance - this.ValidateFourForThousand(transaction);
+    if(newBalance >= this.cupo_sobregiro){
       this.balance -= transaction.value;
+      let newMovement = new FinancialMovement();
+      newMovement.type = 'Retiro';
+      newMovement.date = new Date();
+      newMovement.value = transaction.value;
+      this.movements.push(newMovement);
     }
   }
 
   ValidateFourForThousand (transaction){
     let cuatropormil:number = transaction.value * 4/1000;
-    let newBalance: number = transaction.value - cuatropormil;
     return cuatropormil;
   }
 
