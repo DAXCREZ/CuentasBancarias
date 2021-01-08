@@ -11,7 +11,7 @@ export class savingaccountIORM{
   @Column()
   public balance:number;
   @Column()
-  public onwerID:string;
+  public ownerID:string;
   @Column()
   public city:string;
   @Column()

@@ -8,4 +8,4 @@ import { IunidadTrabajo } from "./base/IunidadTrabajo";
   exports:[IunidadTrabajo]
 })
 
-export class infraestructuramodulo{}
+export class Infraestructuramodulo {}
