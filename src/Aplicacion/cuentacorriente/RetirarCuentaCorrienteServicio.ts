@@ -3,50 +3,49 @@ import { BankAccount } from "../../domain/entity/bank.account";
 import { Transaction } from "../../domain/entity/transaction";
 
 
-export class ConsignacionCuentaCorrienteServicios{
+
+
+export class RetirarCuentaCorrienteServicio{
   constructor(private readonly UnidadTrabajo: UnidadTrabajo) {}
 
-  async execute(request: ConsignacionCuentaCorrienteRequets): Promise<ConsignacionCuentaCorrienteRespuesta>{
+  async execute(request: RetirarCuentaCorrienteRequest): Promise<RetirarCuentaCorrienteRespuesta>{
     try{
       const accountSearched: BankAccount = await this.UnidadTrabajo.currentAccountRepositorio.findEntity(request.number);
       if (accountSearched == undefined){
-        return new ConsignacionCuentaCorrienteRespuesta('La cuenta de corriente no existe');
+        return new RetirarCuentaCorrienteRespuesta('La cuenta de corriente no existe');
       }
 
       const balance: number = accountSearched.balance;
       const transaccion: Transaction = new Transaction();
       transaccion.value = request.value;
 
-      accountSearched.consing(transaccion);
+      accountSearched.remove(transaccion);
 
       if(accountSearched.balance == balance){
-        return new ConsignacionCuentaCorrienteRespuesta('Consignacion no realizada');
+        return new RetirarCuentaCorrienteRespuesta('Retiro no realizado. Error al momento de retirar');
       }else {
         await this.UnidadTrabajo.star();
         await this.UnidadTrabajo.currentAccountRepositorio.save(accountSearched);
-        return new ConsignacionCuentaCorrienteRespuesta('Consignacion creada');
+        return new RetirarCuentaCorrienteRespuesta('Retiro creado correctamente');
       }
 
 
     }catch(e){
 
-      return new ConsignacionCuentaCorrienteRespuesta('Al momento de consignar se presento un error');
+      return new RetirarCuentaCorrienteRespuesta('Al momento de consignar se presento un error');
     }
   }
 
 }
 
-export class ConsignacionCuentaCorrienteRequets{
+export class RetirarCuentaCorrienteRequest{
   constructor (
     public readonly number: string,
     public readonly value: number,
   ){}
 }
 
-export class ConsignacionCuentaCorrienteRespuesta{
+export class RetirarCuentaCorrienteRespuesta{
   constructor(public readonly message: string) {
   }
-}
-
-export class ConsignacionCuentaCorrienteServicio {
 }
