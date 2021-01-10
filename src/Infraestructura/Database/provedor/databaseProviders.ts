@@ -10,7 +10,7 @@ export const databaseProviders = [
       synchronize: true,
       useNewUrlParser: true,
       ssl: true,
-      entities: ['dist/infrastructure/database/orm/*.js']
+      entities: ['dist/Infraestructura/Database/orm/*.js']
     })
   }
 ]

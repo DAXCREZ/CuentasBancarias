@@ -10,7 +10,7 @@ import { Infraestructuramodulo } from "src/Infraestructura/Infraestructuramodulo
     ModuloAplicacion
   ],
 
-  exports: [
+  controllers: [
     ControladorCuentaAhorro,
     ControladorCuentaCorriente
   ]
