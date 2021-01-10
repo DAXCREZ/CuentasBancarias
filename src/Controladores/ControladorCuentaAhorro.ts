@@ -1,10 +1,10 @@
 import {Body, Controller, Post} from "@nestjs/common";
-import {IunidadTrabajo} from "../Infraestructura/base/IunidadTrabajo";
-import {RegistrarCuentaAhorroServicio,RegistrarCuentaAhorroRequest} from "../Aplicacion/cuentacorriente/RegistrarCuentaAhorroServicio";
+import {UnidadTrabajo} from "../Infraestructura/base/UnidadTrabajo";
+import {RegistrarCuentaAhorroServicio,RegistrarCuentaAhorroRequest} from "../Aplicacion/cuentaahorro/RegistrarCuentaAhorroServicio";
 
 @Controller('Cuenta Corriente')
 export class ControladorCuentaAhorro{
-  constructor(private readonly IunidadTrabajo: IunidadTrabajo) {}
+  constructor(private readonly IunidadTrabajo: UnidadTrabajo) {}
 
   @Post()
   async registraCuentaAhorro(@Body() request: RegistrarCuentaAhorroRequest){

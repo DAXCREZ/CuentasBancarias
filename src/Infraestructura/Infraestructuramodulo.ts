@@ -1,11 +1,11 @@
 import { Module } from "@nestjs/common";
 import { moduloBasedatos } from "./Database/moduloBasedatos";
-import { IunidadTrabajo } from "./base/IunidadTrabajo";
+import { UnidadTrabajo } from "./base/UnidadTrabajo";
 
 @Module({
   imports:[moduloBasedatos],
-  providers:[IunidadTrabajo],
-  exports:[IunidadTrabajo]
+  providers:[UnidadTrabajo],
+  exports:[UnidadTrabajo]
 })
 
 export class Infraestructuramodulo {}

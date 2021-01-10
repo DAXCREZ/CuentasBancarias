@@ -3,8 +3,6 @@ import { Transaction } from "./transaction";
 
 export class SavingAccount extends BankAccount{
 
-
-
   public consing(transaction: Transaction) {
     this.validateDifferentCityDiscount(transaction);
     if(this.validateFirstMovements() && transaction.value >= 50000){

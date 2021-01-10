@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { RegistrarCuentaAhorroServicio } from "./cuentacorriente/RegistrarCuentaAhorroServicio";
+import { RegistrarCuentaAhorroServicio } from "./cuentaahorro/RegistrarCuentaAhorroServicio";
 import { RegistrarCuentaCorrienteServicios } from "./cuentacorriente/RegistrarCuentaCorrienteServicios";
 
 

@@ -5,7 +5,7 @@ import { Iunidadtrabajo } from "../Contracts/Iunidadtrabajo";
 import { Inject } from "@nestjs/common";
 import { tryCatch } from "rxjs/internal-compatibility";
 
-export class IunidadTrabajo implements Iunidadtrabajo{
+export class UnidadTrabajo implements Iunidadtrabajo{
 
   private readonly queryRunner: QueryRunner;
   private transactionManager: EntityManager;

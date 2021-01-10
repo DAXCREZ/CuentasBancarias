@@ -1,11 +1,11 @@
 
 import { BankAccount } from "../../domain/entity/bank.account";
 import { Transaction } from "../../domain/entity/transaction";
-import {IunidadTrabajo} from "../../Infraestructura/base/IunidadTrabajo";
+import {UnidadTrabajo} from "../../Infraestructura/base/UnidadTrabajo";
 import { CurrentAccount } from "../../domain/entity/CurrentAccount";
 
 export class RegistrarCuentaCorrienteServicios{
-  constructor(private readonly IunidadTrabajo: IunidadTrabajo) {}
+  constructor(private readonly IunidadTrabajo: UnidadTrabajo) {}
 
   async execute(request: RegistrarCuentaCorrienteRequest): Promise<RegistrarCuentaCorrienteRespuesta>{
     try{
