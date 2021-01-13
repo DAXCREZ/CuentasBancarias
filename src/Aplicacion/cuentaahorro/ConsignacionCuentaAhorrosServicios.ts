@@ -1,6 +1,6 @@
 import {UnidadTrabajo} from "../../Infraestructura/base/UnidadTrabajo";
-import { BankAccount } from "../../domain/entity/bank.account";
-import { Transaction } from "../../domain/entity/transaction";
+import { BankAccount } from "../../Dominio/entity/BankAccount";
+import { Transaction } from "../../Dominio/entity/Transaction";
 
 
 

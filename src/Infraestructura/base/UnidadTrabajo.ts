@@ -1,7 +1,7 @@
 import { Connection, EntityManager, QueryRunner } from "typeorm";
-import { currentAccountRepositorio } from "../Repositirio/currentAccountRepositorio";
-import { savingAccountRepositorio } from "../Repositirio/savingAccountRepositorio";
-import { Iunidadtrabajo } from "../Contracts/Iunidadtrabajo";
+import { currentAccountRepositorio } from "../Repositirio/CurrentAccountRepositorio";
+import { savingAccountRepositorio } from "../Repositirio/SavingAccountRepositorio";
+import { Iunidadtrabajo } from "../Contracts/IUnidadTrabajo";
 import { Inject } from "@nestjs/common";
 import { tryCatch } from "rxjs/internal-compatibility";
 

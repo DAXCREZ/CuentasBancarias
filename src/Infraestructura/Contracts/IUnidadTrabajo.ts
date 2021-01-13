@@ -1,5 +1,5 @@
-import { currentAccountRepositorio } from "../Repositirio/currentAccountRepositorio";
-import { savingAccountRepositorio } from "../Repositirio/savingAccountRepositorio";
+import { currentAccountRepositorio } from "../Repositirio/CurrentAccountRepositorio";
+import { savingAccountRepositorio } from "../Repositirio/SavingAccountRepositorio";
 import { Connection } from "typeorm";
 
 export interface Iunidadtrabajo{

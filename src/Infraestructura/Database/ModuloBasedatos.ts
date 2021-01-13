@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
-import { databaseProviders } from "./provedor/databaseProviders";
-import { currentAccountProvider, savingAccountProvider } from "./migracion/provedorEntidades";
+import { databaseProviders } from "./provedor/DatabaseProviders";
+import { currentAccountProvider, savingAccountProvider } from "./migracion/ProvedorEntidades";
 
 @Module({
   providers:[

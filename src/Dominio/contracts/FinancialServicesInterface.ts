@@ -1,4 +1,4 @@
-import { Transaction } from "../entity/transaction";
+import { Transaction } from "../entity/Transaction";
 
 export interface IFinancialService{
 

@@ -1,9 +1,9 @@
 import {Column, Entity, ObjectID, ObjectIdColumn} from "typeorm";
-import {FinancialMovement} from "../../../domain/entity/financial.movement";
+import {FinancialMovement} from "../../../Dominio/entity/FinancialMovement";
 
 @Entity('Saving Account')
 
-export class savingaccountIORM{
+export class savingAccountORM {
   @ObjectIdColumn()
   _id: ObjectID;
   @Column()

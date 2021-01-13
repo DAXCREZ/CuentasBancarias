@@ -1,10 +1,10 @@
 
 // @ts-ignore
 import {Column, Entity, ObjectID, ObjectIdColumn} from "typeorm";
-import {FinancialMovement} from "../../../domain/entity/financial.movement";
+import {FinancialMovement} from "../../../Dominio/entity/FinancialMovement";
 
 @Entity('Current Account')
-export class currentaccountORM{
+export class currentAccountORM {
   @ObjectIdColumn()
   _id: ObjectID;
   @Column()

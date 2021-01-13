@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { MongoRepository } from "typeorm";
-import { BankAccount } from "../../domain/entity/bank.account";
+import { BankAccount } from "../../Dominio/entity/BankAccount";
 
 @Injectable()
 export abstract class repositorioGenerico<T> extends MongoRepository<T>{

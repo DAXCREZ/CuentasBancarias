@@ -1,7 +1,7 @@
-import { BankAccount } from "../../src/domain/entity/bank.account";
-import { SavingAccount } from "../../src/domain/entity/saving.account";
-import { Transaction } from "../../src/domain/entity/transaction";
-import { CurrentAccount } from "../../src/domain/entity/CurrentAccount";
+import { BankAccount } from "../../src/Dominio/entity/BankAccount";
+import { SavingAccount } from "../../src/Dominio/entity/SavingAccount";
+import { Transaction } from "../../src/Dominio/entity/Transaction";
+import { CurrentAccount } from "../../src/Dominio/entity/CurrentAccount";
 
 describe('test de cuenta bancaria',()=>{
   let CuentaBancaria: BankAccount;

@@ -1,6 +1,6 @@
-import { IFinancialService } from "../contracts/financial.services.interface";
-import { Transaction } from "./transaction";
-import { FinancialMovement } from "./financial.movement";
+import { IFinancialService } from "../contracts/FinancialServicesInterface";
+import { Transaction } from "./Transaction";
+import { FinancialMovement } from "./FinancialMovement";
 import { ObjectID } from "typeorm";
 
 export abstract class BankAccount implements IFinancialService{

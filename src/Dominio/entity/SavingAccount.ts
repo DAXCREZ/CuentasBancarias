@@ -1,5 +1,5 @@
-import { BankAccount } from "./bank.account";
-import { Transaction } from "./transaction";
+import { BankAccount } from "./BankAccount";
+import { Transaction } from "./Transaction";
 
 export class SavingAccount extends BankAccount{
 

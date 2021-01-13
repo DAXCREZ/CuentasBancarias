@@ -1,6 +1,6 @@
-import { BankAccount } from "./bank.account";
-import { Transaction } from "./transaction";
-import { FinancialMovement } from "./financial.movement";
+import { BankAccount } from "./BankAccount";
+import { Transaction } from "./Transaction";
+import { FinancialMovement } from "./FinancialMovement";
 
 export class CurrentAccount extends BankAccount{
 

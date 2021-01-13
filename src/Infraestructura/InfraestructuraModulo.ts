@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { moduloBasedatos } from "./Database/moduloBasedatos";
+import { moduloBasedatos } from "./Database/ModuloBasedatos";
 import { UnidadTrabajo } from "./base/UnidadTrabajo";
 
 @Module({
@@ -8,4 +8,4 @@ import { UnidadTrabajo } from "./base/UnidadTrabajo";
   exports:[UnidadTrabajo]
 })
 
-export class Infraestructuramodulo {}
+export class InfraestructuraModulo {}

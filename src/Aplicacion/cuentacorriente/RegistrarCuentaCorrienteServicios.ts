@@ -1,8 +1,8 @@
 
-import { BankAccount } from "../../domain/entity/bank.account";
-import { Transaction } from "../../domain/entity/transaction";
+import { BankAccount } from "../../Dominio/entity/BankAccount";
+import { Transaction } from "../../Dominio/entity/Transaction";
 import {UnidadTrabajo} from "../../Infraestructura/base/UnidadTrabajo";
-import { CurrentAccount } from "../../domain/entity/CurrentAccount";
+import { CurrentAccount } from "../../Dominio/entity/CurrentAccount";
 
 export class RegistrarCuentaCorrienteServicios{
   constructor(private readonly IunidadTrabajo: UnidadTrabajo) {}
